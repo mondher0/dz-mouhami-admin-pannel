@@ -1,27 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { baseUrl } from "@/lib/utils";
-import axios from "axios";
-import { MoreVertical } from "lucide-react";
-
-const deleteUser = async (id) => {
-  try {
-    const response = await axios.delete(`${baseUrl}users/delete/${id}`);
-    console.log(response);
-    window.location.reload();
-  } catch (error) {
-    console.error(error);
-  }
-};
 export const columns = [
   {
     id: "select",
@@ -73,7 +52,7 @@ export const columns = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          First name
+          Last name
           {/* <CaretSortIcon className="ml-2 h-4 w-4" /> */}
         </Button>
       );

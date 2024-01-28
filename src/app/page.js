@@ -16,7 +16,8 @@ export default async function LawyersPage() {
     }
   };
   const lawyers = await getLawyers();
-  const mappedArray = lawyers.map((item) => {
+  console.log(lawyers);
+  const mappedArray = lawyers?.map((item) => {
     const { user, user_id, ...rest } = item; // Destructure user and user_id, and collect the rest
     return { ...rest, ...user }; // Spread the rest and user properties to flatten the user object
   });

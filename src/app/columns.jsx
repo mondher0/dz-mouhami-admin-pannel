@@ -15,11 +15,17 @@ import { MoreVertical } from "lucide-react";
 
 const updateStatus = async (id, is_Approved) => {
   try {
-    const response = await axios.patch(`${baseUrl}lawyers/response/${id}`, {
-      id: parseInt(id),
-      is_Approved: is_Approved,
-      rejection_reason: "string",
-    });
+    const response = await axios.patch(
+      `${baseUrl}lawyers/response`,
+      {
+        id: parseInt(id),
+        is_Approved: is_Approved,
+        rejection_reason: "string",
+      },
+      {
+        mode: "no-cors",
+      },
+    );
     console.log(response);
     window.location.reload();
   } catch (error) {
@@ -77,7 +83,7 @@ export const columns = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          First name
+          Last name
           {/* <CaretSortIcon className="ml-2 h-4 w-4" /> */}
         </Button>
       );
