@@ -1,0 +1,69 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0px 20px 20px 0px;
+  background-color: #3b5f90;
+  margin: 0;
+  padding: 10px !important;
+  width: 272px;
+  line-height: 1.4;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+.sidebar .links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.sidebar .links .link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  gap: 10px;
+}
+.sidebar .links .link:hover {
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  color: white;
+}
+.sidebar .links .link p {
+  margin: 10px;
+}
+.sidebar .links .produit {
+  margin-left: 0px;
+}
+.sidebar .links .produit p {
+  margin-left: 11px;
+}
+.sidebar .links .expectations {
+  margin-left: 2px;
+}
+.sidebar .links .expectations p {
+  margin-left: 11px;
+}
+.sidebar .links .logout {
+  margin-top: 15px;
+}
+@media screen and (min-width: 1600px) {
+  .sidebar {
+    width: 300px;
+  }
+  .sidebar .links .link p {
+    padding: 0;
+  }
+  .sidebar .links {
+    gap: 10px;
+  }
+}
+.active {
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  color: white;
+}
